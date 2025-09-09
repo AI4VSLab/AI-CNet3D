@@ -1,0 +1,70 @@
+dataset:
+  data_size:
+    - 128
+    - 192
+    - 112
+  data_weight: same
+  glaucoma_dir: /path/to/your/glaucoma/data
+  non_glaucoma_dir: /path/to/your/non_glaucoma/data
+  provider: Topcon
+  seeds:
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+experiment:
+  batch_size: 4
+  device: cuda:0
+  info: base_aicnet_3d_hemiretinal
+  learning_rate: 0.0001
+  loss: BCELoss
+  name: more_trials
+  num_epochs: 250
+  patience: 25
+  ssl_loss_name: MSE
+  ssl_weight: 0.75
+  use_ssl: false
+model:
+  attention: true
+  aug_type: fgzs
+  augmentation: true
+  model_params:
+    CARE_layer_num: 4
+    att_ind:
+      - 2
+      - 4
+    att_type: Hemiretinal
+    conv_in_channels:
+      - 1
+      - 32
+      - 32
+      - 32
+      - 32
+    conv_kernel_size:
+      - 7
+      - 5
+      - 3
+      - 3
+      - 3
+    conv_out_channels:
+      - 32
+      - 32
+      - 32
+      - 32
+      - 32
+    conv_padding:
+      - 3
+      - same
+      - same
+      - same
+      - same
+    conv_stride:
+      - 2
+      - 1
+      - 1
+      - 1
+      - 1
+    gradcam_layer_num: 5
+    max_pool_ind: []
+    num_conv_layers: 5
