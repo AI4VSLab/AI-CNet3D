@@ -1,6 +1,6 @@
 # 3D OCT Glaucoma Detection with Novel Cross-Attention Mechanisms, Multi-Task Consistency SSL Fine-tuning, and CARE Visualizations
 
-This repository contains the implementation of **AICNet3D**, a novel 3D convolutional neural network architecture specifically designed for glaucoma detection from Optical Coherence Tomography (OCT) volumes. The model introduces innovative cross-attention mechanisms that leverage the anatomical structure of the optic nerve head (ONH) and macula, multi-task consistency SSL fine-tuning, and CARE visualizations to improve diagnostic accuracy and interpretability while remaining parameter-efficient.
+This repository contains the implementation of **AI-CNet3D**, a novel 3D convolutional neural network architecture specifically designed for glaucoma detection from Optical Coherence Tomography (OCT) volumes. The model introduces innovative cross-attention mechanisms that leverage the anatomical structure of the optic nerve head (ONH) and macula, multi-task consistency SSL fine-tuning, and CARE visualizations to improve diagnostic accuracy and interpretability while remaining parameter-efficient.
 
 ## Key Novel Contributions
 
@@ -30,9 +30,9 @@ A novel self-supervised fine-tuning approach that enforces consistency between G
 - **Weighted Training**: Configurable weighting between classification and consistency objectives
 - **Improved Generalization**: The consistency constraint helps the model learn more robust and interpretable attention patterns
 
-## AICNet3D Architecture
+## AI-CNet3D Architecture
 
-The AICNet3D architecture combines traditional 3D convolutional layers with the novel cross-attention mechanisms. The model supports configurable attention mechanisms that can be inserted at specific layer indices.
+The AI-CNet3D architecture combines traditional 3D convolutional layers with the novel cross-attention mechanisms. The model supports configurable attention mechanisms that can be inserted at specific layer indices.
 
 ### Key Features:
 - **3D Convolutional Backbone**: Standard 3D CNN layers for feature extraction
@@ -142,7 +142,7 @@ The trained model provides:
 ├── overlap_calculations/       # Attention analysis tools
 │   ├── calc_metrics.py        # Quantitative attention analysis
 │   └── make_mask_overlay.py   # Visualization tools
-├── model.py                   # AICNet3D architecture
+├── model.py                   # AI-CNet3D architecture
 ├── transformer_block.py       # Cross-attention mechanisms
 ├── train.py                   # Standard training script
 ├── ssl_finetune.py           # SSL fine-tuning script
