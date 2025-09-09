@@ -110,7 +110,7 @@ class AI_C_NET_3D(nn.Module):
 
     def forward(self, x):
         batch_size = x.shape[0]
-        # CARE (Cross-Attention Representation) - captures attention from transformer blocks
+        # CARE (Channel-Attention Representation) - captures attention from transformer blocks
         attn_return = None
         for i, layer in enumerate(self.layers):
             x = layer(x)
